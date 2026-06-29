@@ -4,6 +4,9 @@
 
 Contactless respiratory signal extraction from thermal infrared video using YOLO-based nostril localisation. Per-frame mean pixel intensity is sampled from the detected nostril ROI to reconstruct a breathing waveform — no sensors, no contact.
 
+> ⚠️ The notebook is an **educational demos, not medical devices.** 
+> Do not use it for diagnosis or any clinical decision.
+
 ---
 
 ## How It Works

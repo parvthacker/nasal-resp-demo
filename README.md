@@ -41,20 +41,7 @@ Each frame is passed through a YOLO detector that finds the face and nostril bou
 
 ## Running in Colab
 
-Click the **Open in Colab** badge above, then add this as the first cell and run it:
-
-```python
-import os, subprocess
-
-subprocess.run([
-    "git", "clone",
-    "https://github.com/parvthacker/nasal-resp-demo.git"
-])
-os.chdir("/content/nasal-resp-demo")
-subprocess.run(["pip", "install", "-q", "ultralytics"])
-print("Ready")
-```
-
+Click the **Open in Colab** badge above.
 Then **Runtime → Run all**.
 
 > Colab's free tier includes a T4 GPU. Make sure to select it under **Runtime → Change runtime type → T4 GPU** before running — the model runs on CUDA.
@@ -91,7 +78,6 @@ To add participants, place each folder under `data_path` with the same structure
 | Notebook Section | What it does |
 |---|---|
 | **1. Configuration** | Load model, set paths and participant IDs |
-| **Helper Functions** | Bandpass / lowpass / highpass Butterworth filters for post-processing |
 | **2. Nasal Localizer** | Runs YOLO on every frame, extracts nostril visibility and containment metrics, saves annotated video with visibility timeline strip |
 | **2.1 Localisation Plot** | Per-participant nostril visibility summary, flags participants with >50% invisible frames |
 | **3. Resp Signal Extraction** | Re-runs detection and saves mean nostril intensity as the respiration signal alongside a dual-panel annotated video (waveform + visibility) |
